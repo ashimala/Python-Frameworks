@@ -1,15 +1,14 @@
 # Python-Frameworks-Assignment-Week-8
 # Assignment Overview
 
-This assignment will guide you through a basic analysis of the CORD-19 research dataset and creating a simple Streamlit application to display your findings. This simplified version focuses on fundamental data analysis skills appropriate for beginners.
+This is a basic analysis of the CORD-19 research dataset and creating a simple Streamlit application to display your findings. This simplified version focuses on fundamental data analysis skills .
 
-#Learning Objectives
+#Objectives
 
-By completing this assignment, you will:
 
 Practice loading and exploring a real-world dataset
 
-Learn basic data cleaning techniques
+Basic data cleaning techniques
 
 Create meaningful visualizations
 
@@ -46,7 +45,6 @@ Streamlit (web application)
 
 Jupyter Notebook (optional, for exploration)
 
-Upload your work on a GitHub repo (Frameworks_Assignment). Submit the URL for this repo to complete the assignment. 
 
 Install the required packages:
 
@@ -147,58 +145,6 @@ Create a brief report of your findings
 
 Reflect on challenges and learning
 
-Evaluation Criteria
 
-Your project will be evaluated based on:
 
-Complete implementation (40%): All tasks completed
 
-Code quality (30%): Readable, well-commented code
-
-Visualizations (20%): Clear, appropriate charts
-
-Streamlit app (10%): Functional application
-
-Tips for Success
-
-Start small: Begin with a subset of the data if the full file is too large
-
-Focus on basics: Don't worry about advanced analysis techniques
-
-Debug incrementally: Test each part of your code as you write it
-
-Use resources: Consult pandas and Streamlit documentation when stuck
-
-Ask for help: Reach out to instructors or peers if you get stuck
-
-Example Code Snippets
-python
-# Load the data
-import pandas as pd
-df = pd.read_csv('metadata.csv')
-
-# Basic info
-print(df.shape)
-print(df.info())
-
-# Check missing values
-print(df.isnull().sum())
-
-# Simple visualization
-import matplotlib.pyplot as plt
-df['year'] = pd.to_datetime(df['publish_time']).dt.year
-year_counts = df['year'].value_counts().sort_index()
-plt.bar(year_counts.index, year_counts.values)
-plt.title('Publications by Year')
-plt.show()
-Expected Outcomes
-
-By completing this assignment, you will have:
-
-A Jupyter notebook or Python script with your analysis
-
-Several visualizations showing patterns in the data
-
-A simple Streamlit application that displays your findings
-
-Basic experience with the data science workflow
